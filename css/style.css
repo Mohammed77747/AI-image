@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh; */
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+}
+
+section .color {
+    position: absolute;
+    filter: blur(150px);
+}
+
+section .color:nth-child(1) {
+    top: -350px;
+    width: 600px;
+    height: 600px;
+    background: #ff359b;
+}
+
+section .color:nth-child(2) {
+    bottom: -150px;
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    background: #fffd87;
+}
+
+section .color:nth-child(3) {
+    bottom: 50px;
+    right: 100px;
+    width: 300px;
+    height: 300px;
+    background: #00d2ff;
+}
+
+.box {
+    position: relative;
+}
+.box .square{
+    position: absolute;
+    backdrop-filter: blur(5px) ;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    animation:animate 10s linear infinite ;
+    animation-delay:calc(-1s * var(--i)) ;
+}
+@keyframes animate{
+    0%,100%
+    {
+        transform:translateY(-20px) ;
+    }
+    50%
+    {
+        transform:translateY(40px) ;
+    }
+}
+.box .square:nth-child(1){
+    top: 150px;
+    right: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+}
+.box .square:nth-child(2){
+    top: -50px;
+    left: -60px;
+    width: 100px;
+    height: 100px;
+}
+.box .square:nth-child(3){
+    bottom: 50px;
+    right: -60px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+.box .square:nth-child(4){
+    bottom: -80px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+.box .square:nth-child(5){
+    top: -80px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
+    z-index: 2;
+}
+ .containar {
+    position: relative;
+    width: 700px;
+    min-height: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px) ;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+} 
+.form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+.form h2{
+    position: relative;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    margin-left: 64px;
+}
+.form .inputbox{
+    width: 100%;
+    margin-top: 20px;
+}
+.form .inputbox input{
+    width: 100%;
+    background:rgba(255, 255, 255, 0.2);
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid #ff359d;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color:black;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+}
+.form .inputbox input::placeholder{
+    color:black;
+    padding-left: 300px;
+}
+ button{
+    width: 20%;
+    background:rgba(255, 255, 255, 0.2);
+    outline: none;
+    margin-left: 250px;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid #ff359d;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color:black;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start title */
+/* h2{
+    color: #fff;
+    font-size: 40px; */
+
+
+/* End title */
+/* start prompt */
+/* .prompt{
+    background-color:#292c31;
+    padding: 5px;
+    width: 620px;
+    border: 3px solid #36383d;
+    border-radius: 10px;
+}
+input,button{
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+}
+input{
+    background-color: #292c31;
+    width: 75%;
+    outline: none;
+}
+button{
+    background-color: #36383d;
+    width: 20%;
+    cursor: pointer;
+    
+}
+button:hover{
+    background-color: #454649;
+}
+.blok{
+    display: none;
+} */
+
+/* end prompt */
+/* start images */
+.images {
+    display: flex;
+    gap: 10px;
+   
+}
+
+.images div {
+    height: 200px;
+    width: 200px;
+    /* background-color: #292c31; */
+    border-radius: 10px;
+    border: 3px solid #ff359b;
+}
+
+.images div img {
+    width: 100%;
+}
+
+
+/* end images */
+@media screen and (max-width:500px) {
+    .form h2{
+        position: relative;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        margin-left: 250px;
+    }
+
+    .images {
+
+        display: flex;
+        flex-direction: column;
+        margin-left: 250px;
+    }
+
+    .form .inputbox input{
+        width: 50%;
+        margin-left: 200px;
+        background:rgba(255, 255, 255, 0.2);
+        outline: none;
+        padding: 10px 20px;
+        border-radius: 35px;
+        border: 1px solid #ff359d;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color:black;
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    }
+    .form .inputbox input::placeholder{
+        padding-left: 10px;
+    }
+     button{
+        margin-left: 300px;
+    }
+    .box .square:nth-child(1){
+        top: 150px;
+    right: 59px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+    }
+    .box .square:nth-child(2){
+        top: 57px;
+    left: 183px;
+    width: 100px;
+    height: 100px;
+}
+.box .square:nth-child(3){
+    bottom: 221px;
+    right: 74px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+.box .square:nth-child(4){
+    top: 627px;
+    left: 180px;
+    width: 60px;
+    height: 60px;
+    z-index: 2;
+}
+.box .square:nth-child(5){
+    top: 295px;
+    left: 175px;
+    width: 60px;
+    height: 60px;
+    z-index: 2;
+}
+.containar{
+    margin-top: 200px;
+}
+
+}
+    
